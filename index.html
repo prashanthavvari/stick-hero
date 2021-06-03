@@ -96,11 +96,40 @@
             transform: rotate(90deg);
             transform-origin: bottom;
         }
+        #alert {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.432);
+            height: 100%;
+            width: 100%;
+            z-index:1;
+        }
+        .alert{
+            background-color: whitesmoke;
+            padding: 30px;
+            line-height: 25px;
+            position: fixed;
+            top: 25px;
+            left: 35%;
+            width: 30%;
+            border-radius: 6px;
+            display: block;
+            z-index: 2;
+        }
     </style>
 </head>
 
 <body>
     <div id="game-canvas"></div>
+    <div id="alert">
+        <div class="alert">
+            This game is still under development.
+            <br>The goal is to reach the other block by rightly increasing the length of the stick.
+            <br>You can use up-arrow to increase the length of the stick.
+            <br><button onclick="closeAlert()">Ok</button>
+        </div>
+    </div>
 </body>
 <script src="lib/character.js"></script>
 <script src="lib/block.js"></script>
